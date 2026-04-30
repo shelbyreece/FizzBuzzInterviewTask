@@ -8,9 +8,10 @@
         static void Main(string[] args)
         {
             var fizzBuzzer = new FizzBuzz();
-            string value = fizzBuzzer.DemoMethod();
-            Console.WriteLine(value);
-            Console.ReadKey();
+            var results = fizzBuzzer.FizzBuzzValuesForRange(1, 100);
+            foreach(var item in results){
+                Console.WriteLine(item);
+            }       
         }
     }
 }
