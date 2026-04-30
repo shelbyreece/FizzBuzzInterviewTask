@@ -1,10 +1,11 @@
 ﻿namespace FizzBuzzLib
 {
-    public class FizzBuzz : IFizzBuzz, IFizzBuzzRange
+    public class FizzBuzz : IFizzBuzz, IFizzBuzzRange, IFlexiFizzBuzz
     {
         public string FizzBuzzifyAnInt(int input)
         {
-              if(input % 3 == 0 && input % 5 == 0)
+            //Step 1 Logic
+           /*   if(input % 3 == 0 && input % 5 == 0)
               {
                   return "FizzBuzz";
               }
@@ -19,7 +20,10 @@
              else
              {
                  return input.ToString();
-             }
+             } */
+
+             //Extended Task Logic
+             
         }
 
         public IEnumerable<string> FizzBuzzValuesForRange(int start, int end)
