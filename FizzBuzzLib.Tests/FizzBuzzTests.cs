@@ -41,5 +41,13 @@ namespace FizzBuzzLib.Tests
             var output = fizzBuzz.FizzBuzzifyAnInt(7);
             output.Should().Be("7");
         }
+
+        [Fact]
+        public void FizzBuzzRangeTest_ReturnsCorrectValuesForRange()
+        {
+            var fizzBuzz = new FizzBuzz();
+            var output = fizzBuzz.FizzBuzzValuesForRange(1,15);
+            output.Should().Be("1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz");
+        }
     }
 }
