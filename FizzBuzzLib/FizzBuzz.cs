@@ -1,6 +1,6 @@
 ﻿namespace FizzBuzzLib
 {
-    public class FizzBuzz : IFizzBuzz
+    public class FizzBuzz : IFizzBuzz, IFizzBuzzRange
     {
         public string FizzBuzzifyAnInt(int input)
         {
@@ -20,6 +20,15 @@
              {
                  return input.ToString();
              }
+        }
+
+        public IEnumerable<string> FizzBuzzValuesForRange(int start, int end)
+        {
+            var results = new List<string>();
+            for(int i= start; i <= end; i++) {
+                results.Add(FizzBuzzifyAnInt(i));
+            }
+            return results;    
         }
     }
 }
